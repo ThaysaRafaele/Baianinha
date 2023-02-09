@@ -220,6 +220,7 @@ header{
 }
 
 /* ------------- SOBRE NÓS ------------- */
+
 .sobre-nos{
     background-color: #F6EDE2;
 }
@@ -304,3 +305,5 @@ header{
     object-fit: cover;
     width: 100%;
 }
+
+/* ------------- PRODUTOS ------------- */
