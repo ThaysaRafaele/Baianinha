@@ -138,7 +138,9 @@ header{
     text-transform:  uppercase;
     letter-spacing: .1rem;
     font-family: "Muli", serif;
-    background-color: #2b2340;
+    background: #2b2340;
+    background: -webkit-linear-gradient(to right, #915a64, #2b2340);
+    background: linear-gradient(to left, #915a64, #2b2340);
     padding: 1rem 3rem;
     border: none;
     border-radius: 5px;
@@ -164,7 +166,8 @@ header{
     position: fixed;
     top: 0;
     right: -20rem;
-    transition: all .8s;
+    transition: all .8s;    
+    z-index: 99;
 }
 
 .show-menu .sidebar{
@@ -225,13 +228,13 @@ header{
     background-color: #F6EDE2;
 }
 
-.sessao-header{
+.sobreNos-header{
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.sessao-header h1{
+.sobreNos-header h1{
     font-family: "Baloo Da 2", serif;
     font-size: 3rem;
     color: #2b2340;
@@ -307,3 +310,104 @@ header{
 }
 
 /* ------------- PRODUTOS ------------- */
+
+.sessao-produtos{    
+    background-color: #F6EDE2;
+    height: 100vh;
+}
+
+.produtos{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.produtos-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.produtos-header h1{
+    font-family: "Baloo Da 2", serif;
+    font-size: 3rem;
+    color: #2b2340;
+    border-bottom: solid 3px #2b2340;
+    margin-bottom: 1.5rem;
+}
+
+.card{
+    width: 18rem;
+    height: 25rem;
+    position: relative;
+}
+
+.card-img-wrapper{
+    width: 100%;
+    height: 100%;
+}
+
+.card-img-wrapper img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: .5rem;
+    transition: opacity .3s;
+}
+
+.card:hover .card-img-wrapper img{    
+    opacity: 0.45;
+}
+
+.card-info{
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    bottom: 0;
+    padding: 2rem;
+    text-shadow: 0.3rem 0.2rem 0.3rem rgba(0, 0, 0, .6);
+    transition: all .3s;
+}
+
+.card-info h2{
+    font-weight: 500;
+    font-family: "Baloo Da 2", serif;
+    font-size: 2rem;
+    color: #2b2340;
+}
+
+.card-info h3{
+    font-weight: bolder;
+    font-family: "Muli", serif;
+    color: #2b2340;
+    margin-bottom: 1.5rem;
+}
+
+.card-info p{
+    font-weight: 400;
+    font-family: "Josefin+Slab", serif;
+    width: 80%;
+    color: #2b2340;
+    margin-bottom: 1.5rem;
+}
+
+.card-info button{
+    font-weight: 400;
+    font-family: "Muli", serif;
+    width: 8rem;
+    height: 2.5rem;
+    background: #2b2340;
+    background: -webkit-linear-gradient(to right, #915a64, #2b2340);
+    background: linear-gradient(to left, #915a64, #2b2340);
+    color: #FFFFFF;
+    border-radius: .5rem;
+    border: none;
+    box-shadow: 0 .1rem .8rem rgba(0 ,0, 0, .4);
+    cursor: pointer;
+}
+
+.card:hover .card-info{
+    bottom: 2rem;
+    opacity: 1;
+    visibility: visible;
+}
+
