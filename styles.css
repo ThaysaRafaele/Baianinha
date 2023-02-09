@@ -495,8 +495,12 @@ header{
     text-transform: uppercase;
 }
 
-.field:focu{
+.field:focus{
     border-bottom: 2px solid #2b2340;
+    margin: 2.5rem 0;
+}
+
+.field:valid{
     margin: 2.5rem 0;
 }
 
