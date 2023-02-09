@@ -8,6 +8,19 @@
     text-decoration: none;
 }
 
+.btn{
+    font-weight: 400;
+    font-family: "Muli", serif;
+    background: #2b2340;
+    background: -webkit-linear-gradient(to right, #915a64, #2b2340);
+    background: linear-gradient(to left, #915a64, #2b2340);
+    color: #FFFFFF;
+    border-radius: .5rem;
+    border: none;
+    box-shadow: 0 .1rem .8rem rgba(0 ,0, 0, .4);
+    cursor: pointer;
+}
+
 /* ------------- HOME ------------- */
 
 .hamburguer{    
@@ -391,18 +404,8 @@ header{
 }
 
 .card-info button{
-    font-weight: 400;
-    font-family: "Muli", serif;
     width: 8rem;
     height: 2.5rem;
-    background: #2b2340;
-    background: -webkit-linear-gradient(to right, #915a64, #2b2340);
-    background: linear-gradient(to left, #915a64, #2b2340);
-    color: #FFFFFF;
-    border-radius: .5rem;
-    border: none;
-    box-shadow: 0 .1rem .8rem rgba(0 ,0, 0, .4);
-    cursor: pointer;
 }
 
 .card:hover .card-info{
@@ -411,3 +414,100 @@ header{
     visibility: visible;
 }
 
+/* ------------- CONTATO ------------- */
+
+.sessao-contato{
+    background-color: #F6EDE2;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sessao-contato h1{
+    font-family: "Baloo Da 2", serif;
+    color: #2b2340;
+    font-size: 3rem;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.sessao-contato form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contato-wrapper{
+    width: 60%;
+    height: 30rem;
+    display: flex;
+    box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.5);
+}
+
+.contato-left{    
+    width: 35%;
+    background: 
+        linear-gradient(rgba(15, 15, 15, 0.6), rgba(48 , 18, 33, 0.9)),
+        url(./assets/envelopes.jpg);
+    background-size: cover;
+}
+
+.contato-right{    
+    width: 65%;
+    padding: 1rem 3rem 3rem 3rem;
+    background-color: #F6EDE2;
+}
+
+.input-group{
+    position: relative;
+}
+
+.input-group textarea{
+    padding-top: 1rem;
+    max-width: 20rem;
+    max-height: 7rem;
+    min-width: 20rem;
+    min-height: 3rem;
+}
+
+.field{
+    border: none;
+    background: transparent;
+    width: 20rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    font-family: "Josefin+Slab", serif;
+    border-bottom: 2px dashed #2b2340;
+    outline: none;
+    margin: 1rem 0;
+    transition: all 0.3s;
+}
+
+.field-label{
+    position: absolute;
+    left: 0;
+    top: 2rem;
+    font-size: 1.2rem;
+    font-family: "Josefin+Slab", serif;
+    text-transform: uppercase;
+}
+
+.field:focus{
+    border-bottom: 2px solid #2b2340;
+    margin: 2.5rem 0;
+}
+
+.field:valid{
+    margin: 2.5rem 0;
+}
+
+.btn-submit{
+    font-size: 1.2rem;
+    width: 100%;
+    height: 2rem;
+    text-transform: uppercase;
+    margin-top: 1rem;
+}
