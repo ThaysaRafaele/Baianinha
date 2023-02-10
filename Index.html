@@ -25,7 +25,7 @@
                 <span>Fechar</span>
             </div>
 
-            <header>
+            <header id="home">
                 <div class="img-wrapper">
                     <img src="./assets/bg-grande.jpg" alt="background image">
                 </div>
@@ -58,42 +58,77 @@
                 <div class="produtos">
                     <div class="card">
                         <div class="card-img-wrapper">
-                            <img src="./assets/produtos/biquini-rosa-zebra.jpeg" alt="Biquini rosa com estampa de zebra">
+                            <img id="produto1" src="./assets/produtos/biquini-rosa-zebra.jpeg" alt="Biquini rosa com estampa de zebra">
                         </div>
-                        <div class="card-info">
+                        <div class="card-info produto1">
                             <h2>Biquini rosa - zebra</h2>
                             <h3>Informações sobre o produto</h3>
                             <p>
                                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                             </p>
-                            <button class="btn">Comprar</button>
+                            <button class="btn comprar" id="comprar1" onclick="Modal.open('comprar1', 'Biquini rosa - zebra')">Comprar</button>
                         </div>
                     </div>
                     <div class="card">
                         <div class="card-img-wrapper">
-                            <img src="./assets/produtos/biquini-laranja-branco.jpeg" alt="Biquini laranja e branco">
+                            <img id="produto2" src="./assets/produtos/biquini-laranja-branco.jpeg" alt="Biquini laranja e branco">
                         </div>
-                        <div class="card-info">
+                        <div class="card-info produto2">
                             <h2>Biquini laranja e branco</h2>
                             <h3>Informações sobre o produto</h3>
                             <p>
                                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                             </p>
-                            <button class="btn">Comprar</button>
+                            <button class="btn comprar" id="comprar2" onclick="Modal.open('comprar2', 'Biquini laranja e branco')">Comprar</button>
                         </div>
                     </div>
                     <div class="card">
                         <div class="card-img-wrapper">
-                            <img src="./assets/produtos/biquini-rosa-onça.jpeg" alt="Biquini rosa com estampa de onça">
+                            <img id="produto3" src="./assets/produtos/biquini-rosa-onça.jpeg" alt="Biquini rosa com estampa de onça">
                         </div>
-                        <div class="card-info">
+                        <div class="card-info produto3">
                             <h2>Biquini rosa - onça</h2>
                             <h3>Informações sobre o produto</h3>
                             <p>
                                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                             </p>
-                            <button class="btn">Comprar</button>
+                            <button class="btn comprar" id="comprar3" onclick="Modal.open('comprar3', 'Biquini rosa - onça')">Comprar</button>
                         </div>
+                    </div>
+                </div>
+                
+
+            <!-- janela modal .produtoWindowArea -->
+            <div class="produtoWindowArea">
+                <div class="produtoWindowBody">
+                    <div class="produtoInfo--cancelMobileButton">Voltar</div>
+                    <div class="produtoBig">
+                        <img src="" />
+                    </div>
+                    <div class="produtoInfo">
+                        <h1>--</h1>
+                        <div class="produtoInfo--desc">--</div>
+                        <div class="produtoInfo--sizearea">
+                            <div class="produtoInfo--sector">Tamanho</div>
+                            <div class="produtoInfo--sizes">
+                                <div data-key="0" class="produtoInfo--size">P</div>
+                                <div data-key="1" class="produtoInfo--size">M</div>
+                                <div data-key="2" class="produtoInfo--size selected">G</div>
+                            </div>
+                        </div>
+                        <div class="produtoInfo--pricearea">
+                            <div class="produtoInfo--sector">Preço</div>
+                            <div class="produtoInfo--price">
+                                <div class="produtoInfo--actualPrice">R$ 60,00</div>
+                                <div class="produtoInfo--qtarea">
+                                    <button class="produtoInfo--qtmenos">-</button>
+                                    <div class="produtoInfo--qt">1</div>
+                                    <button class="produtoInfo--qtmais">+</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="produtoInfo--addButton btn">Adicionar ao carrinho</div>
+                        <div class="produtoInfo--cancelButton">Cancelar</div>
                     </div>
                 </div>
             </section>
@@ -225,7 +260,7 @@
             </div>
         </footer>
 
-        <a href="" id="link-topo">
+        <a href="#home" id="link-topo">
             <i class="fas fa-arrow-up"></i>
         </a>
 

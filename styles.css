@@ -8,6 +8,10 @@
     text-decoration: none;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 .btn{
     font-weight: 400;
     font-family: "Muli", serif;
@@ -412,6 +416,178 @@ header{
     bottom: 2rem;
     opacity: 1;
     visibility: visible;
+}
+
+.produtoWindowArea {
+    position:fixed;
+    left:0;
+    top:0;
+    bottom:0;
+    right:0;
+    background-color:rgba(255, 255, 255, 0.5);
+    display: none;
+    transition: all ease .5s;
+    justify-content: center;
+    align-items: center;
+    overflow-y:auto;
+}
+
+.produtoWindowBody {
+    width:900px;
+    background-color:#FFF;
+    border-radius:10px;
+    box-shadow:0px 0px 15px #999;
+    display:flex;
+    margin:20px 0px;
+}
+
+.produtoBig {
+    flex:1;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.produtoBig--back {
+    position:absolute;
+    width:30px;
+    height:30px;
+    background-color:#000;
+}
+
+
+.produtoBig img {
+    height:400px;
+    width:auto;
+}
+
+.produtoInfo {
+    flex:1;
+    font-family:'Hepta Slab', Helvetica, Arial;
+    padding-bottom:50px;
+}
+
+.produtoInfo h1 {
+    margin-top:50px;
+}
+
+.produtoInfo .produtoInfo--desc {
+    font-size:15px;
+    color:#999;
+    margin-top:10px;
+    font-family:'Lato',Helvetica,Arial;
+}
+
+.produtoInfo--sector {
+    color:#CCC;
+    text-transform: uppercase;
+    font-size:14px;
+    margin-top:30px;
+    margin-bottom:10px;
+}
+
+.produtoInfo--sizes {
+    display:inline-flex;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+.produtoInfo--size {
+    padding:10px 15px;
+    color:#000;
+    background-color:#EEE;
+    font-size:13px;
+    font-weight: bold;
+    cursor:pointer;
+}
+
+.produtoInfo--size:hover {
+    background-color:#CCC;
+}
+
+.produtoInfo--size.selected {
+    background-color:#d32f2f;
+    color:#FFF;
+}
+
+.produtoInfo--size.selected span {
+    color:#D6D6D6;
+}
+
+.produtoInfo--size span {
+    font-size:12px;
+    color:#999;
+    font-weight: normal;
+}
+
+.produtoInfo--price {
+    display:flex;
+    align-items:center;
+}
+
+.produtoInfo--actualPrice {
+    font-size:28px;
+    margin-right:30px;
+}
+
+.produtoInfo--qtarea {
+    display:inline-flex;
+    background-color:#EEE;
+    border-radius:10px;
+    height:30px;
+}
+
+.produtoInfo--qtarea button {
+    border:0;
+    background-color:transparent;
+    font-size:17px;
+    outline:0;
+    cursor:pointer;
+    padding:0px 10px;
+    color:#333;
+}
+
+.produtoInfo--qt {
+    line-height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 0px 5px;
+    color:#000;
+}
+
+.produtoInfo--addButton {
+    margin-top:30px;
+    padding:20px 30px;
+    border-radius:20px;
+    color:#FFF;
+    display:inline-block;
+    cursor:pointer;
+    margin-right:30px;
+}
+
+.produtoInfo--addButton:hover {
+    background-color:#32a345;
+}
+
+.produtoInfo--cancelButton {
+    display:inline-block;
+    cursor:pointer;
+    margin-top:30px;
+    padding:20px 30px;
+    border-radius:20px;
+    font-family: "Muli", serif;
+    background: linear-gradient(to left, #915a64, #2b2340);
+    color: #FFFFFF;
+    border: none;
+    box-shadow: 0 .1rem .8rem rgba(0 ,0, 0, .4);
+}
+
+.produtoInfo--cancelMobileButton {
+    display:none;
+    height:40px;
+    text-align:center;
+    line-height: 40px;
+    margin-bottom:30px;
 }
 
 /* ------------- CONTATO ------------- */
