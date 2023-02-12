@@ -608,8 +608,22 @@ header{
 
 /* ------------- Carrinho ------------- */
 
-aside.show {
+.aside-carrinho {
+    background-color:#ffcdd2;
+    width:0vw;
+    font-family:'Hepta Slab', Helvetica, Arial;
+    transition:all ease .2s;
+    overflow-x:hidden;
+    position: absolute;
+    z-index: 99;
+    height: 100%;
+    right: -20px;
+}
+
+.aside-carrinho.show {
+    right: 0;
     width:30vw;
+    z-index: 99999999999;
 }
 
 .cart--area {
@@ -702,6 +716,11 @@ aside.show {
 
 .cart--finalizar:hover {
     background-color:#35af4a;
+}
+
+.linkFinalizar{
+    text-decoration: none;
+    color: white;
 }
 
 /* ------------- CONTATO ------------- */
@@ -866,16 +885,16 @@ footer{
         max-width:100%;
     }
     
-    aside {
+    .aside-carrinho {
         width:auto;
         position:fixed;
-        left:100vw;
+        /* left:100vw; */
         right:0;
         top:0;
         bottom:0;
         transition: all ease .2s;
     }
-    aside.show {
+    .aside-carrinho.show {
         width:auto;
     }
 

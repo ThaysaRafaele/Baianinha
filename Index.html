@@ -57,7 +57,7 @@
             <!-- /aside do menu -->
 
             <!-- aside do carrinho -->
-            <aside>
+            <aside class="aside-carrinho">
                 <div class="cart--area">
                     <div class="menu-closer">❌</div>
                     <h1>Seus Produtos</h1>
@@ -75,13 +75,16 @@
                             <span>Total</span>
                             <span>R$ --</span>
                         </div>
-                        <div class="cart--finalizar">Finalizar a compra</div>
+                        <div class="cart--finalizar"><a class="linkFinalizar" href="https://api.whatsapp.com/send?phone=5567993455044&text=message" 
+                            target="_blank" rel="noopener">Finalizar a compra</a></div>
                     </div>
                 </div>
             </aside>
             <!-- /aside do carrinho -->
 
             <div class="models">
+
+                <!-- produto na lista -->
                 <div class="card">
                     <div class="card-img-wrapper">
                         <img id="produto" src="">
@@ -92,6 +95,17 @@
                         
                         <div class="produto-item--desc"><p>--</p></div>
                         <button class="btn comprar" id="comprar">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- produto no carrinho -->
+                <div class="cart--item">
+                    <img src="" />
+                    <div class="cart--item-nome">--</div>
+                    <div class="cart--item--qtarea">
+                        <button class="cart--item-qtmenos">-</button>
+                        <div class="cart--item--qt">1</div>
+                        <button class="cart--item-qtmais">+</button>
                     </div>
                 </div>
             </div>
