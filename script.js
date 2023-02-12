@@ -304,8 +304,9 @@ const finalizarCompra = () => {
         let totalMsg = "Valor Total do pedido: "+ total;
         message = message + pedidoMsg + totalMsg;
         message = message.replace(/\s/g, '%20');
-
-        seleciona(".linkFinalizar").href.replace('message', message);
+        // console.log(message)
+        seleciona(".linkFinalizar").href = 'https://api.whatsapp.com/send?phone=5567993455044&text='+message
+        // console.log(seleciona(".linkFinalizar").href)
 
         seleciona('.aside-carrinho').classList.remove('show')
         seleciona('.aside-carrinho').style.left = '100vw'
