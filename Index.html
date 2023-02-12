@@ -13,6 +13,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700&family=Josefin+Slab:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,400;0,500;0,700;1,100;1,400&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./styles.css">
 
+        <link rel="icon" href="./assets/logo_oficial-removebg-preview.png" />
+
         <title>Baianinha Beach</title>
     </head>
     <body>
@@ -25,6 +27,7 @@
                 <span>Fechar</span>
             </div>
 
+
             <header id="home">
                 <div class="img-wrapper">
                     <img src="./assets/bg-grande.jpg" alt="background image">
@@ -32,10 +35,11 @@
                 <div class="banner">
                     <h1>Baianinha Beach</h1>
                     <p>Os padrões que lutem para se enquadrarem a você!</p>
-                    <button>Comprar</button>
+                    <a href="#products"><button>Comprar</button></a>
                 </div>
             </header>
 
+            <!-- aside do menu -->
             <aside class="sidebar">
                 <nav>
                     <ul class="menu">
@@ -50,85 +54,103 @@
                         <a href="#"><i class="fab fa-whatsapp"></i></a></div>
                 </nav>
             </aside>
+            <!-- /aside do menu -->
+
+            <!-- aside do carrinho -->
+            <aside class="aside-carrinho">
+                <div class="cart--area">
+                    <div class="menu-closer">❌</div>
+                    <h1>Seus Produtos</h1>
+                    <div class="cart"></div>
+                    <div class="cart--details">
+                        <div class="cart--totalitem subtotal">
+                            <span>Subtotal</span>
+                            <span>R$ --</span>
+                        </div>
+                        <div class="cart--totalitem desconto">
+                            <span>Desconto</span>
+                            <span>R$ --</span>
+                        </div>
+                        <div class="cart--totalitem total big">
+                            <span>Total</span>
+                            <span>R$ --</span>
+                        </div>
+                        <div class="cart--finalizar"><a class="linkFinalizar" href="https://api.whatsapp.com/send?phone=5567993455044&text=message" 
+                            target="_blank" rel="noopener">Finalizar a compra</a></div>
+                    </div>
+                </div>
+            </aside>
+            <!-- /aside do carrinho -->
+
+            <div class="models">
+
+                <!-- produto na lista -->
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img id="produto" src="">
+                    </div>
+                    <div class="card-info produto">
+                        <div class="produto-item--name"><h2>--</h2></div>
+                        <h3>Informações sobre o produto</h3>
+                        
+                        <div class="produto-item--desc"><p>--</p></div>
+                        <button class="btn comprar" id="comprar">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- produto no carrinho -->
+                <div class="cart--item">
+                    <img src="" />
+                    <div class="cart--item-nome">--</div>
+                    <div class="cart--item--qtarea">
+                        <button class="cart--item-qtmenos">-</button>
+                        <div class="cart--item--qt">1</div>
+                        <button class="cart--item-qtmais">+</button>
+                    </div>
+                </div>
+            </div>
 
             <section class="sessao-produtos" id="products">
                 <div class="produtos-header">
-                    <h1>Produtos</h1>
+                    <div class="title-produtos"><h1>Produtos</h1></div>
+                    <div class="menu-openner"><span>0</span><i class="fa-solid fa-cart-plus"></i></div>
+                    <!-- <div class="menu-openner"><span>0</span>🛒</div> -->
                 </div>
-                <div class="produtos">
-                    <div class="card">
-                        <div class="card-img-wrapper">
-                            <img id="produto1" src="./assets/produtos/biquini-rosa-zebra.jpeg" alt="Biquini rosa com estampa de zebra">
-                        </div>
-                        <div class="card-info produto1">
-                            <h2>Biquini rosa - zebra</h2>
-                            <h3>Informações sobre o produto</h3>
-                            <p>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                            </p>
-                            <button class="btn comprar" id="comprar1" onclick="Modal.open('comprar1', 'Biquini rosa - zebra')">Comprar</button>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-img-wrapper">
-                            <img id="produto2" src="./assets/produtos/biquini-laranja-branco.jpeg" alt="Biquini laranja e branco">
-                        </div>
-                        <div class="card-info produto2">
-                            <h2>Biquini laranja e branco</h2>
-                            <h3>Informações sobre o produto</h3>
-                            <p>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                            </p>
-                            <button class="btn comprar" id="comprar2" onclick="Modal.open('comprar2', 'Biquini laranja e branco')">Comprar</button>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-img-wrapper">
-                            <img id="produto3" src="./assets/produtos/biquini-rosa-onça.jpeg" alt="Biquini rosa com estampa de onça">
-                        </div>
-                        <div class="card-info produto3">
-                            <h2>Biquini rosa - onça</h2>
-                            <h3>Informações sobre o produto</h3>
-                            <p>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                            </p>
-                            <button class="btn comprar" id="comprar3" onclick="Modal.open('comprar3', 'Biquini rosa - onça')">Comprar</button>
-                        </div>
-                    </div>
-                </div>
-                
 
-            <!-- janela modal .produtoWindowArea -->
-            <div class="produtoWindowArea">
-                <div class="produtoWindowBody">
-                    <div class="produtoInfo--cancelMobileButton">Voltar</div>
-                    <div class="produtoBig">
-                        <img src="" />
-                    </div>
-                    <div class="produtoInfo">
-                        <h1>--</h1>
-                        <div class="produtoInfo--desc">--</div>
-                        <div class="produtoInfo--sizearea">
-                            <div class="produtoInfo--sector">Tamanho</div>
-                            <div class="produtoInfo--sizes">
-                                <div data-key="0" class="produtoInfo--size">P</div>
-                                <div data-key="1" class="produtoInfo--size">M</div>
-                                <div data-key="2" class="produtoInfo--size selected">G</div>
-                            </div>
+                <div class="produtos"></div>                
+
+                <!-- janela modal .produtoWindowArea -->
+                <div class="produtoWindowArea">
+                    <div class="produtoWindowBody">
+                        <div class="produtoInfo--cancelMobileButton">Voltar</div>
+                        <div class="produtoBig">
+                            <img src="" />
                         </div>
-                        <div class="produtoInfo--pricearea">
-                            <div class="produtoInfo--sector">Preço</div>
-                            <div class="produtoInfo--price">
-                                <div class="produtoInfo--actualPrice">R$ 60,00</div>
-                                <div class="produtoInfo--qtarea">
-                                    <button class="produtoInfo--qtmenos">-</button>
-                                    <div class="produtoInfo--qt">1</div>
-                                    <button class="produtoInfo--qtmais">+</button>
+                        <div class="produtoInfo">
+                            <h1>--</h1>
+                            <div class="produtoInfo--desc">--</div>
+                            <div class="produtoInfo--sizearea">
+                                <div class="produtoInfo--sector">Tamanho</div>
+                                <div class="produtoInfo--sizes">
+                                    <div data-key="P" class="produtoInfo--size">P</div>
+                                    <div data-key="M" class="produtoInfo--size">M</div>
+                                    <div data-key="G" class="produtoInfo--size selected">G</div>
                                 </div>
                             </div>
+                            <div class="produtoInfo--pricearea">
+                                <div class="produtoInfo--sector">Preço</div>
+                                <div class="produtoInfo--price">
+                                    <div class="produtoInfo--actualPrice">R$ --</div>
+                                    <div class="produtoInfo--qtarea">
+                                        <button class="produtoInfo--qtmenos">-</button>
+                                        <div class="produtoInfo--qt">1</div>
+                                        <button class="produtoInfo--qtmais">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="produtoInfo--addButton btn">Adicionar ao carrinho</div>
+                            <div class="produtoInfo--cancelButton">Cancelar</div>
                         </div>
-                        <div class="produtoInfo--addButton btn">Adicionar ao carrinho</div>
-                        <div class="produtoInfo--cancelButton">Cancelar</div>
                     </div>
                 </div>
             </section>
@@ -266,4 +288,5 @@
 
     </body>
     <script src="./script.js"></script>
+    <script src="./produtos.js"></script>
 </html>
