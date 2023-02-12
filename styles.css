@@ -327,6 +327,9 @@ header{
 }
 
 /* ------------- PRODUTOS ------------- */
+.models {
+    display:none;
+}
 
 .sessao-produtos{    
     background-color: #F6EDE2;
@@ -338,10 +341,33 @@ header{
     justify-content: space-evenly;
 }
 
-.produtos-header{
+.produtos-header {
+    height: 15%;
+    background-color:#F6EDE2;
+    display:flex; /* none; */
+    justify-content:space-between; /* flex-end; */
+    align-items: center;
+}
+
+.produtos-header .title-produtos {
+    color: #fff;
+    margin-left: 40%;
+}
+
+.menu-openner {
+    margin-right: 8%;
+    font-size: 26px;
+    background: linear-gradient(to left, #915a64, #2b2340);
+    color: white;
+    padding: 5px 20px;
+    border-radius: 5px;
+    cursor: pointer;
     display: flex;
     align-items: center;
-    justify-content: center;
+}
+
+.menu-openner span {
+    margin-right:10px;
 }
 
 .produtos-header h1{
@@ -434,7 +460,7 @@ header{
 
 .produtoWindowBody {
     width:900px;
-    background-color:#FFF;
+    background-color:#F6EDE2;
     border-radius:10px;
     box-shadow:0px 0px 15px #999;
     display:flex;
@@ -737,4 +763,34 @@ footer{
     color: #FFFFFF;
     border-radius: .3rem;
     box-shadow: 0 0.1rem 0.6rem #000000009;
+}
+
+
+/* ------------- RESPONSIVIDADE ------------- */
+
+@media (max-width:840px) {
+    .produtos-header {
+        display:flex;
+    }
+    
+}
+
+@media (max-width:450px) {
+    .produtos-header h1 {
+        font-size: 1.5rem;
+        margin-top: 15%;
+    }
+    .menu-openner {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width:380px) {
+    .produtos-header h1 {
+        font-size: 1rem;
+        margin-top: 30%;
+    }
+    .menu-openner {
+        font-size: 1rem;
+    }
 }

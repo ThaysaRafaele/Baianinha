@@ -25,6 +25,7 @@
                 <span>Fechar</span>
             </div>
 
+
             <header id="home">
                 <div class="img-wrapper">
                     <img src="./assets/bg-grande.jpg" alt="background image">
@@ -32,7 +33,7 @@
                 <div class="banner">
                     <h1>Baianinha Beach</h1>
                     <p>Os padrões que lutem para se enquadrarem a você!</p>
-                    <button>Comprar</button>
+                    <a href="#products"><button>Comprar</button></a>
                 </div>
             </header>
 
@@ -51,12 +52,30 @@
                 </nav>
             </aside>
 
+            <div class="models">
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img id="produto" src="">
+                    </div>
+                    <div class="card-info produto">
+                        <div class="produto-item--name"><h2>--</h2></div>
+                        <h3>Informações sobre o produto</h3>
+                        
+                        <div class="produto-item--desc"><p>--</p></div>
+                        <button class="btn comprar" id="comprar">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
             <section class="sessao-produtos" id="products">
                 <div class="produtos-header">
-                    <h1>Produtos</h1>
+                    <div class="title-produtos"><h1>Produtos</h1></div>
+                    <div class="menu-openner"><span>0</span><i class="fa-solid fa-cart-plus"></i></div>
+                    <!-- <div class="menu-openner"><span>0</span>🛒</div> -->
                 </div>
                 <div class="produtos">
-                    <div class="card">
+                    
+                    <!-- <div class="card">
                         <div class="card-img-wrapper">
                             <img id="produto1" src="./assets/produtos/biquini-rosa-zebra.jpeg" alt="Biquini rosa com estampa de zebra">
                         </div>
@@ -68,8 +87,8 @@
                             </p>
                             <button class="btn comprar" id="comprar1" onclick="Modal.open('comprar1', 'Biquini rosa - zebra')">Comprar</button>
                         </div>
-                    </div>
-                    <div class="card">
+                    </div> -->
+                    <!-- <div class="card">
                         <div class="card-img-wrapper">
                             <img id="produto2" src="./assets/produtos/biquini-laranja-branco.jpeg" alt="Biquini laranja e branco">
                         </div>
@@ -94,7 +113,7 @@
                             </p>
                             <button class="btn comprar" id="comprar3" onclick="Modal.open('comprar3', 'Biquini rosa - onça')">Comprar</button>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 
 
@@ -266,4 +285,5 @@
 
     </body>
     <script src="./script.js"></script>
+    <script src="./produtos.js"></script>
 </html>
