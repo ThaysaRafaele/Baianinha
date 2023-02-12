@@ -297,7 +297,7 @@ const finalizarCompra = () => {
         let message = "Olá, gostaria de fechar o pedido de: ";
         let pedidoMsg = "";
         for(let i = 0; i < cart.length; i++){           
-            pedidoMsg = pedidoMsg +  cart[i].Nome +" - "+ cart[i].qt + " unidades" + " - valor: "+ " - tamanho: " + cart[i].size + "\n";
+            pedidoMsg = pedidoMsg +  cart[i].Nome +" - "+ cart[i].qt + " unidades" + " - valor: "+ " - tamanho: " + cart[i].size + "%20%20";
             total += cart[i].qt * cart[i].price;
         };
 
