@@ -532,18 +532,8 @@ header{
 }
 
 .produtoInfo--size.selected {
-    background-color:#d32f2f;
-    color:#FFF;
-}
-
-.produtoInfo--size.selected span {
-    color:#D6D6D6;
-}
-
-.produtoInfo--size span {
-    font-size:12px;
-    color:#999;
-    font-weight: normal;
+    background: linear-gradient(to left, #915a64, #2b2340);
+    color: white;
 }
 
 .produtoInfo--price {
