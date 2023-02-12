@@ -305,6 +305,8 @@ const finalizarCompra = () => {
         message = message + pedidoMsg + totalMsg;
         message = message.replace(/\s/g, '%20');
 
+        seleciona(".linkFinalizar").href.replace('message', message);
+
         seleciona('.aside-carrinho').classList.remove('show')
         seleciona('.aside-carrinho').style.left = '100vw'
         seleciona('.produtos-header').style.display = 'flex'
