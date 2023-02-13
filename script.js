@@ -287,23 +287,30 @@ const atualizarCarrinho = () => {
 	}
 }
 
+
 const finalizarCompra = () => {
+
+    let total = 0;
+    let message = "Olá, gostaria de fechar o pedido de: ";
+    let pedidoMsg = "";
+    for(let i = 0; i < cart.length; i++){           
+        pedidoMsg = pedidoMsg +  cart[i].Nome +" - "+ cart[i].qt + " unidades" + " - valor: "+ " - tamanho: " + cart[i].size + "%20%20";
+        total += cart[i].qt * cart[i].price;
+    };
+    let totalMsg = "Valor Total do pedido: "+ total;
+        message = message + pedidoMsg + totalMsg;
+        message = message.replace(/\s/g, '%20');
+        // console.log(message)
+    seleciona(".linkFinalizar").href += message;
     seleciona('.cart--finalizar').addEventListener('click', () => {
         // console.log('Finalizar compra')
         // console.log(cart.length)
         // console.log(cart)
-        let total = 0;
+        
 
-        let message = "Olá, gostaria de fechar o pedido de: ";
-        let pedidoMsg = "";
-        for(let i = 0; i < cart.length; i++){           
-            pedidoMsg = pedidoMsg +  cart[i].Nome +" - "+ cart[i].qt + " unidades" + " - valor: "+ cart[i].price+ " - tamanho: " + cart[i].size + "\n";
-            total += cart[i].qt * cart[i].price;
-        };
+        
 
-        let totalMsg = "Valor Total do pedido: "+ total;
-        message = message + pedidoMsg + totalMsg;
-        message = message.replace(/\s/g, '%20');
+        console.log(seleciona(".linkFinalizar").href)
 
         seleciona('.linkFinalizar').href += message; 
         seleciona('.aside-carrinho').classList.remove('show')
