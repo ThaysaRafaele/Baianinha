@@ -297,7 +297,7 @@ const finalizarCompra = () => {
         let message = "Olá, gostaria de fechar o pedido de: ";
         let pedidoMsg = "";
         for(let i = 0; i < cart.length; i++){           
-            pedidoMsg = pedidoMsg +  cart[i].Nome +" - "+ cart[i].qt + " unidades" + " - valor: "+ " - tamanho: " + cart[i].size + "\n";
+            pedidoMsg = pedidoMsg +  cart[i].Nome +" - "+ cart[i].qt + " unidades" + " - valor: "+ cart[i].price+ " - tamanho: " + cart[i].size + "\n";
             total += cart[i].qt * cart[i].price;
         };
 
@@ -305,6 +305,7 @@ const finalizarCompra = () => {
         message = message + pedidoMsg + totalMsg;
         message = message.replace(/\s/g, '%20');
 
+        seleciona('.linkFinalizar').href += message; 
         seleciona('.aside-carrinho').classList.remove('show')
         seleciona('.aside-carrinho').style.left = '100vw'
         seleciona('.produtos-header').style.display = 'flex'
