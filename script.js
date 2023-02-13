@@ -131,12 +131,12 @@ const adicionarNoCarrinho = () => {
 
         // pegar dados da janela modal atual
     	// qual produto? pegue o modalKey para usar produtoJson[modalKey]
-    	// console.log("produto " + modalKey)
     	// tamanho
 	    let size = seleciona('.produtoInfo--size.selected').getAttribute('data-key')
-	    // console.log("Tamanho " + size)
+
 	    // quantidade
-    	// console.log("Quant. " + quantprodutos)
+        //quantprodutos
+
         // preco
         let price = seleciona('.produtoInfo--actualPrice').innerHTML.replace('R$&nbsp;', '')
     
@@ -147,7 +147,6 @@ const adicionarNoCarrinho = () => {
         // antes de adicionar verifique se ja tem aquele codigo e tamanho
         // para adicionarmos a quantidade
         let key = cart.findIndex( (item) => item.identificador == identificador )
-        // console.log(key)
 
         if(key > -1) {
             // se encontrar aumente a quantidade
@@ -163,8 +162,7 @@ const adicionarNoCarrinho = () => {
                 price: parseFloat(price) // price: price
             }
             cart.push(produto)
-            // console.log(produto)
-            // console.log('Sub total R$ ' + (produto.qt * produto.price).toFixed(2))
+            //'Sub total R$ ' + (produto.qt * produto.price).toFixed(2)
         }
 
         fecharModal();
@@ -174,7 +172,6 @@ const adicionarNoCarrinho = () => {
 }
 
 const abrirCarrinho = () => {
-    // console.log('Qtd de itens no carrinho ' + cart.length)
     if(cart.length > 0) {
         // mostrar o carrinho
 	    seleciona('.aside-carrinho').classList.add('show')
@@ -220,11 +217,9 @@ const atualizarCarrinho = () => {
 		for(let i in cart) {
 			// use o find para pegar o item por id
 			let produtoItem = produtoJson.find( (item) => item.id == cart[i].id )
-			// console.log(produtoItem)
 
             // em cada item pegar o subtotal
         	subtotal += cart[i].price * cart[i].qt
-            //console.log(cart[i].price)
 
 			// fazer o clone, exibir na telas e depois preencher as informacoes
 			let cartItem = seleciona('.models .cart--item').cloneNode(true)
@@ -241,7 +236,6 @@ const atualizarCarrinho = () => {
 
 			// selecionar botoes + e -
 			cartItem.querySelector('.cart--item-qtmais').addEventListener('click', () => {
-				// console.log('Clicou no botão mais')
 				// adicionar apenas a quantidade que esta neste contexto
 				cart[i].qt++
 				// atualizar a quantidade
@@ -249,7 +243,6 @@ const atualizarCarrinho = () => {
 			})
 
 			cartItem.querySelector('.cart--item-qtmenos').addEventListener('click', () => {
-				// console.log('Clicou no botão menos')
 				if(cart[i].qt > 1) {
 					// subtrair apenas a quantidade que esta neste contexto
 					cart[i].qt--
@@ -270,6 +263,7 @@ const atualizarCarrinho = () => {
 
 		// fora do for
 		// calcule desconto 10% e total
+        //desconto caso futuramente deseje aderir a cupons
 		//desconto = subtotal * 0.1
 		desconto = subtotal * 0
 		total = subtotal - desconto
@@ -293,9 +287,6 @@ const finalizarCompra = () => {
 
     
     seleciona('.cart--finalizar').addEventListener('click', () => {
-        // console.log('Finalizar compra')
-        // console.log(cart.length)
-        // console.log(cart)
         
         let total = 0;
 
@@ -311,8 +302,6 @@ const finalizarCompra = () => {
         message = message.replace(/\s/g, '%20');
 
         seleciona('.linkFinalizar').href += message;         
-
-        console.log(seleciona(".linkFinalizar").href)
 
         seleciona('.aside-carrinho').classList.remove('show')
         seleciona('.aside-carrinho').style.left = '100vw'
