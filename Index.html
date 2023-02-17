@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
     <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,25 +10,65 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700&family=Josefin+Slab:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,400;0,500;0,700;1,100;1,400&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="./styles.css">
-
-        <link rel="icon" href="./assets/logo_oficial-removebg-preview.png" />
 
         <title>Baianinha Beach</title>
+
+        <link rel="stylesheet" href="./style.css" />
     </head>
     <body>
-        <div class="container">
 
-            <div class="hamburguer">
-                <div class="line" id="line"></div>
-                <div class="line" id="line2"></div>
-                <div class="line" id="line3"></div>
-                <span>Fechar</span>
+        <div class="hamburguer">
+            <i class="fa-solid fa-bars"></i>
+            <span>Fechar</span>
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+
+        <!-- aside do menu lateral -->
+        <aside class="sidebar">
+            <nav>
+                <ul class="menu">
+                    <li class="menu-item"><a href="#" class="menu-link">Home</a></li>
+                    <li class="menu-item"><a href="#products" class="menu-link">Produtos</a></li>
+                    <li class="menu-item"><a href="#aboutUs" class="menu-link">Sobre Nós</a></li>
+                    <li class="menu-item"><a href="#contato" class="menu-link">Contato</a></li>
+                </ul>
+                <div class="social-media">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a></div>
+            </nav>
+        </aside>
+
+        <div class="models">
+
+            <!-- produto na lista -->
+            <div class="produto-item">
+                <a href="">
+                    <div class="produto-item--img"><img src="" /></div>
+                    <div class="produto-item--add">+</div>
+                </a>
+                <div class="produto-item--price">R$ --</div>
+                <div class="produto-item--name">--</div>
+                <div class="produto-item--desc">--</div>
             </div>
+    
+            <!-- produto no carrinho -->
+            <div class="cart--item">
+                <img src="" />
+                <div class="cart--item-nome">--</div>
+                <div class="cart--item--qtarea">
+                    <button class="cart--item-qtmenos">-</button>
+                    <div class="cart--item--qt">1</div>
+                    <button class="cart--item-qtmais">+</button>
+                </div>
+            </div>
+    
+        </div>
 
+        <main>
 
-            <header id="home">
-                <div class="img-wrapper">
+            <section id="home">
+                <div class="img-wrapper-home">
                     <img src="./assets/bg-grande.jpg" alt="background image">
                 </div>
                 <div class="banner">
@@ -37,124 +76,47 @@
                     <p>Os padrões que lutem para se enquadrarem a você!</p>
                     <a href="#products"><button>Comprar</button></a>
                 </div>
-            </header>
-
-            <!-- aside do menu -->
-            <aside class="sidebar">
-                <nav>
-                    <ul class="menu">
-                        <li class="menu-item"><a href="#" class="menu-link">Home</a></li>
-                        <li class="menu-item"><a href="#products" class="menu-link">Produtos</a></li>
-                        <li class="menu-item"><a href="#aboutUs" class="menu-link">Sobre Nós</a></li>
-                        <li class="menu-item"><a href="#contato" class="menu-link">Contato</a></li>
-                    </ul>
-                    <div class="social-media">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-whatsapp"></i></a></div>
-                </nav>
-            </aside>
-            <!-- /aside do menu -->
-
-            <!-- aside do carrinho -->
-            <aside class="aside-carrinho">
-                <div class="cart--area">
-                    <div class="menu-closer">❌</div>
-                    <h1>Seus Produtos</h1>
-                    <div class="cart"></div>
-                    <div class="cart--details">
-                        <div class="cart--totalitem subtotal">
-                            <span>Subtotal</span>
-                            <span>R$ --</span>
-                        </div>
-                        <div class="cart--totalitem desconto">
-                            <span>Desconto</span>
-                            <span>R$ --</span>
-                        </div>
-                        <div class="cart--totalitem total big">
-                            <span>Total</span>
-                            <span>R$ --</span>
-                        </div>
-                        <a class="linkFinalizar" href="https://api.whatsapp.com/send?phone=5567999238105&text=" 
-                            target="_blank" rel="noopener"><div class="cart--finalizar">Finalizar a compra</div></a>
-                    </div>
-                </div>
-            </aside>
-            <!-- /aside do carrinho -->
-
-            <div class="models">
-
-                <!-- produto na lista -->
-                <div class="card">
-                    <div class="card-img-wrapper">
-                        <img id="produto" src="">
-                    </div>
-                    <div class="card-info produto">
-                        <div class="produto-item--name"><h2>--</h2></div>
-                        <h3>Informações sobre o produto</h3>
-                        
-                        <div class="produto-item--desc"><p>--</p></div>
-                        <button class="btn comprar" id="comprar">Comprar</button>
-                    </div>
-                </div>
-
-                <!-- produto no carrinho -->
-                <div class="cart--item">
-                    <img src="" />
-                    <div class="cart--item-nome">--</div>
-                    <div class="cart--item--qtarea">
-                        <button class="cart--item-qtmenos">-</button>
-                        <div class="cart--item--qt">1</div>
-                        <button class="cart--item-qtmais">+</button>
-                    </div>
-                </div>
-            </div>
-
-            <section class="sessao-produtos" id="products">
-                <div class="produtos-header">
-                    <div class="title-produtos"><h1>Produtos</h1></div>
-                    <div class="menu-openner"><span>0</span><i class="fa-solid fa-cart-plus"></i></div>
-                    <!-- <div class="menu-openner"><span>0</span>🛒</div> -->
-                </div>
-
-                <div class="produtos"></div>                
-
-                <!-- janela modal .produtoWindowArea -->
-                <div class="produtoWindowArea">
-                    <div class="produtoWindowBody">
-                        <div class="produtoInfo--cancelMobileButton">Voltar</div>
-                        <div class="produtoBig">
-                            <img src="" />
-                        </div>
-                        <div class="produtoInfo">
-                            <h1>--</h1>
-                            <div class="produtoInfo--desc">--</div>
-                            <div class="produtoInfo--sizearea">
-                                <div class="produtoInfo--sector">Tamanho</div>
-                                <div class="produtoInfo--sizes">
-                                    <div data-key="P" class="produtoInfo--size">P</div>
-                                    <div data-key="M" class="produtoInfo--size">M</div>
-                                    <div data-key="G" class="produtoInfo--size selected">G</div>
-                                </div>
-                            </div>
-                            <div class="produtoInfo--pricearea">
-                                <div class="produtoInfo--sector">Preço</div>
-                                <div class="produtoInfo--price">
-                                    <div class="produtoInfo--actualPrice">R$ --</div>
-                                    <div class="produtoInfo--qtarea">
-                                        <button class="produtoInfo--qtmenos">-</button>
-                                        <div class="produtoInfo--qt">1</div>
-                                        <button class="produtoInfo--qtmais">+</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="produtoInfo--addButton btn">Adicionar ao carrinho</div>
-                            <div class="produtoInfo--cancelButton">Cancelar</div>
-                        </div>
-                    </div>
-                </div>
             </section>
 
+            <section id="products">
+                <div class="header-Produtos">
+                    <h1>Baianinha Beach</h1>
+                    <div class="menu-openner"><span>0</span>🛒</div>
+                </div>      
+
+                <!-- aside do carrinho -->
+                <aside class="aside-carrinho">
+                    <div class="cart--area">
+                        <div class="menu-closer"><i class="fa-solid fa-xmark"></i></div>
+                        <h1>Seus Produtos</h1>
+                        <div class="cart"></div>
+                        <div class="cart--details">
+                            <div class="cart--totalitem subtotal">
+                                <span>Subtotal</span>
+                                <span>R$ --</span>
+                            </div>
+                            <div class="cart--totalitem desconto">
+                                <span>Desconto</span>
+                                <span>R$ --</span>
+                            </div>
+                            <div class="cart--totalitem total big">
+                                <span>Total</span>
+                                <span>R$ --</span>
+                            </div>
+                            <a class="linkFinalizar" href="https://api.whatsapp.com/send?phone=5567999238105&text=" 
+                                ktarget="_blank" rel="noopener"><div class="cart--finalizar">Finalizar a compra</div></a>
+                        </div>
+                    </div>
+                </aside>
+                <!-- /aside do carrinho -->
+    
+                <div class="titleProdutos">
+                    <h1>Produtos</h1>
+                </div>
+    
+                <div class="produto-area"></div>
+            </section>  
+            
             <section class="sobre-nos" id="aboutUs">
                 <div class="sobreNos-header">
                     <h1>Sobre Nós</h1>
@@ -247,27 +209,67 @@
                     <div class="contato-left"></div>
                     <div class="contato-right">
                         <h1>Contato</h1>
-                        <form action="">
-                            <div class="input-group">
-                                <input type="text" required  class="field" id="nome">
-                                <span for="nome" class="field-label">Nome</span>
+                        
+                        <form action="/pagina-processa-dados-do-form" method="post">
+                            <div>
+                                <label for="nome">Nome:</label>
+                                <input type="text" id="nome" name="usuario_nome" />
                             </div>
-                            <div class="input-group">
-                                <input type="text" required  class="field" id="email">
-                                <label for="email" class="field-label">Email</label>
+                            <div>
+                                <label for="email">E-mail:</label>
+                                <input type="email" id="email" name="usuario_email" />
                             </div>
-                            <div class="input-group">
-                                <textarea name="" required  id="mensagem" cols="30" rows="5" class="field"></textarea>
-                                <label for="mensagem" class="field-label">Mensagem</label>
+                            <div>
+                                <label for="msg">Mensagem:</label>
+                                <textarea id="msg" name="usuario_msg"></textarea>
                             </div>
-                            <button type="submit" class="btn btn-submit">Enviar</button>
+                        
+                            <div class="button">
+                                <button type="submit">Enviar sua mensagem</button>
+                            </div>
                         </form>
                     </div>
 
                 </div>
             </section>
+        </main>
+
+        <!-- janela modal .produtoWindowArea -->
+        <div class="produtoWindowArea">
+            <div class="produtoWindowBody">
+                <div class="produtoInfo--cancelMobileButton">Voltar</div>
+                <div class="produtoBig">
+                    <img src="" />
+                </div>
+                <div class="produtoInfo">
+                    <h1>--</h1>
+                    <div class="produtoInfo--desc">--</div>
+                    <div class="produtoInfo--sizearea">
+                        <div class="produtoInfo--sector">Tamanho</div>
+                        <div class="produtoInfo--sizes">
+                            <div data-key="P" class="produtoInfo--size"><span>--</span></div>
+                            <div data-key="M" class="produtoInfo--size"><span>--</span></div>
+                            <div data-key="G" class="produtoInfo--size selected"><span>--</span></div>
+                        </div>
+                    </div>
+                    <div class="produtoInfo--pricearea">
+                        <div class="produtoInfo--sector">Preço</div>
+                        <div class="produtoInfo--price">
+                            <div class="produtoInfo--actualPrice">R$ --</div>
+                            <div class="produtoInfo--qtarea">
+                                <button class="produtoInfo--qtmenos">-</button>
+                                <div class="produtoInfo--qt">1</div>
+                                <button class="produtoInfo--qtmais">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="produtoInfo--addButton">Adicionar ao carrinho</div>
+                    <div class="produtoInfo--cancelButton">Cancelar</div>
+                </div>
+            </div>
         </div>
-        
+        <!-- /janela modal .produtoWindowArea -->
+
 
         <footer>
             <div class="footer-content">
@@ -285,8 +287,8 @@
         <a href="#home" id="link-topo">
             <i class="fas fa-arrow-up"></i>
         </a>
+    
+    <script src="./produtos.js"></script>
 
     </body>
-    <script src="./script.js"></script>
-    <script src="./produtos.js"></script>
 </html>
