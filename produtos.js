@@ -216,7 +216,6 @@ const atualizarCarrinho = () => {
 		for(let i in cart) {
 			// use o find para pegar o item por id
 			let produtoItem = produtoJson.find( (item) => item.id == cart[i].id )
-            produtoItem.price = produtoItem.price.toFixed(2)
 
             // em cada item pegar o subtotal
         	subtotal += cart[i].price * cart[i].qt
