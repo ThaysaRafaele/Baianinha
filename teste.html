@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,400;0,500;0,700;1,100;1,400&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700&family=Josefin+Slab:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,400;0,500;0,700;1,100;1,400&display=swap" rel="stylesheet">
+
+        <title>Baianinha Beach</title>
+
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+
+        <div class="hamburguer">
+            <div class="line" id="line"></div>
+            <div class="line" id="line2"></div>
+            <div class="line" id="line3"></div>
+            <span>Fechar</span>
+        </div>
+
+        <!-- aside do menu lateral -->
+        <aside class="sidebar">
+            <nav>
+                <ul class="menu">
+                    <li class="menu-item"><a href="#" class="menu-link">Home</a></li>
+                    <li class="menu-item"><a href="#products" class="menu-link">Produtos</a></li>
+                    <li class="menu-item"><a href="#aboutUs" class="menu-link">Sobre Nós</a></li>
+                    <li class="menu-item"><a href="#contato" class="menu-link">Contato</a></li>
+                </ul>
+                <div class="social-media">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a></div>
+            </nav>
+        </aside>
+
+        <div class="models">
+
+            <!-- produto na lista -->
+            <div class="produto-item">
+                <a href="">
+                    <div class="produto-item--img"><img src="" /></div>
+                    <div class="produto-item--add">+</div>
+                </a>
+                <div class="produto-item--price">R$ --</div>
+                <div class="produto-item--name">--</div>
+                <div class="produto-item--desc">--</div>
+            </div>
+    
+            <!-- produto no carrinho -->
+            <div class="cart--item">
+                <img src="" />
+                <div class="cart--item-nome">--</div>
+                <div class="cart--item--qtarea">
+                    <button class="cart--item-qtmenos">-</button>
+                    <div class="cart--item--qt">1</div>
+                    <button class="cart--item-qtmais">+</button>
+                </div>
+            </div>
+    
+        </div>
+
+        <main>
+
+            <section id="home">
+                <div class="img-wrapper-home">
+                    <img src="./assets/bg-grande.jpg" alt="background image">
+                </div>
+                <div class="banner">
+                    <h1>Baianinha Beach</h1>
+                    <p>Os padrões que lutem para se enquadrarem a você!</p>
+                    <a href="#products"><button>Comprar</button></a>
+                </div>
+            </section>
+
+            <section id="products">
+                <div class="header-Produtos">
+                    <h1>Baianinha Beach</h1>
+                    <div class="menu-openner"><span>0</span>🛒</div>
+                </div>      
+
+                <!-- aside do carrinho -->
+                <aside class="aside-carrinho">
+                    <div class="cart--area">
+                        <div class="menu-closer">❌</div>
+                        <h1>Seus Produtos</h1>
+                        <div class="cart"></div>
+                        <div class="cart--details">
+                            <div class="cart--totalitem subtotal">
+                                <span>Subtotal</span>
+                                <span>R$ --</span>
+                            </div>
+                            <div class="cart--totalitem desconto">
+                                <span>Desconto</span>
+                                <span>R$ --</span>
+                            </div>
+                            <div class="cart--totalitem total big">
+                                <span>Total</span>
+                                <span>R$ --</span>
+                            </div>
+                            <a class="linkFinalizar" href="https://api.whatsapp.com/send?phone=5567999238105&text=" 
+                                ktarget="_blank" rel="noopener"><div class="cart--finalizar">Finalizar a compra</div></a>
+                        </div>
+                    </div>
+                </aside>
+                <!-- /aside do carrinho -->
+    
+                <div class="titleProdutos">
+                    <h1>Produtos</h1>
+                </div>
+    
+                <div class="produto-area"></div>
+            </section>  
+            
+            <section class="sobre-nos" id="aboutUs">
+                <div class="sobreNos-header">
+                    <h1>Sobre Nós</h1>
+                </div>
+                <div class="informacoes">
+                    <div class="info">
+                        <div class="info-header">
+                            <i class="fab fa-book-user"></i>
+                            <i class="fa-regular fa-address-book"></i>
+                            <h3>Título</h3>
+                        </div>
+                        <div class="info-text">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, dolore, corporis libero eveniet necessitatibus ea voluptatibus deserunt eum quas magni molestiae voluptatem vitae voluptates, quaerat vel mollitia iusto commodi in.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="info">
+                        <div class="info-header">
+                            <i class="fa-solid fa-house-tsunami"></i>
+                            <h3>Título</h3>
+                        </div>
+                        <div class="info-text">
+                            <p>
+                                Illo reprehenderit, corrupti fugit quibusdam dolorem reiciendis voluptas veritatis odit minus, optio eaque sit ab voluptatem ea quis modi totam iste veniam ipsam velit. In sed sint atque dolorum sequi.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="info">
+                        <div class="info-header">
+                            <i class="fa-solid fa-umbrella-beach"></i>
+                            <!-- <i class="fa-solid fa-heart"></i>
+                            <i class="fa-regular fa-heart"></i> -->
+                            <h3>Título</h3>
+                        </div>
+                        <div class="info-text">
+                            <p>
+                                Nulla vero fuga voluptas corrupti laboriosam maxime quam ab fugit aut. Voluptates voluptas eligendi eos et aut error neque illo, vitae nulla laudantium odio soluta similique perferendis minus ut veritatis.
+                            </p>
+                            
+                        </div>
+                    </div>
+
+                    <div class="info">
+                        <div class="info-header">
+                            <!-- <i class="fa-solid fa-cart-shopping"></i>-->
+                            <i class="fa-solid fa-cart-plus"></i> 
+                            <h3>Título</h3>
+                        </div>
+                        <div class="info-text">
+                            <p>
+                                Eligendi asperiores sit facere delectus accusamus dolor vitae consectetur. Nesciunt autem sequi pariatur, incidunt, necessitatibus dolorem, aspernatur et at tempora aliquam blanditiis ea natus repudiandae possimus? Excepturi repellat eveniet omnis?
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="info">
+                        <div class="info-header">
+                            <i class="fa-regular fa-address-book"></i>
+                            <h3>Título</h3>
+                        </div>
+                        <div class="info-text">
+                            <p>
+                                Quam tempora culpa voluptas at officiis dolorum aliquid a assumenda laudantium iure. Laudantium, dicta nostrum eligendi debitis ipsum laborum doloribus cum ea officia soluta consequuntur placeat iure natus temporibus sint.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="info">
+                        <div class="info-header">
+                            <i class="fa-solid fa-truck-fast"></i>
+                            <h3>Título</h3>
+                        </div>
+                        <div class="info-text">
+                            <p>
+                                Quos quo laudantium sapiente rerum earum? Similique, culpa! Officiis autem mollitia pariatur necessitatibus optio, exercitationem, doloremque eos quia veritatis ipsum cupiditate enim vel facere, quaerat quo ea illum rem saepe.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="info-img-wrapper">
+                        <img src="./assets/anna julia - canva - roxo.png" alt="Imagem da pessoa fundadora da marca">
+                    </div>
+                </div>
+            </section>
+
+            <section class="sessao-contato" id="contato">
+                <div class="contato-wrapper">
+                    <div class="contato-left"></div>
+                    <div class="contato-right">
+                        <h1>Contato</h1>
+                        
+                        <form action="/pagina-processa-dados-do-form" method="post">
+                            <div>
+                                <label for="nome">Nome:</label>
+                                <input type="text" id="nome" name="usuario_nome" />
+                            </div>
+                            <div>
+                                <label for="email">E-mail:</label>
+                                <input type="email" id="email" name="usuario_email" />
+                            </div>
+                            <div>
+                                <label for="msg">Mensagem:</label>
+                                <textarea id="msg" name="usuario_msg"></textarea>
+                            </div>
+                        
+                            <div class="button">
+                                <button type="submit">Enviar sua mensagem</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+
+        <!-- janela modal .produtoWindowArea -->
+        <div class="produtoWindowArea">
+            <div class="produtoWindowBody">
+                <div class="produtoInfo--cancelMobileButton">Voltar</div>
+                <div class="produtoBig">
+                    <img src="" />
+                </div>
+                <div class="produtoInfo">
+                    <h1>--</h1>
+                    <div class="produtoInfo--desc">--</div>
+                    <div class="produtoInfo--sizearea">
+                        <div class="produtoInfo--sector">Tamanho</div>
+                        <div class="produtoInfo--sizes">
+                            <div data-key="P" class="produtoInfo--size"><span>--</span></div>
+                            <div data-key="M" class="produtoInfo--size"><span>--</span></div>
+                            <div data-key="G" class="produtoInfo--size selected"><span>--</span></div>
+                        </div>
+                    </div>
+                    <div class="produtoInfo--pricearea">
+                        <div class="produtoInfo--sector">Preço</div>
+                        <div class="produtoInfo--price">
+                            <div class="produtoInfo--actualPrice">R$ --</div>
+                            <div class="produtoInfo--qtarea">
+                                <button class="produtoInfo--qtmenos">-</button>
+                                <div class="produtoInfo--qt">1</div>
+                                <button class="produtoInfo--qtmais">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="produtoInfo--addButton">Adicionar ao carrinho</div>
+                    <div class="produtoInfo--cancelButton">Cancelar</div>
+                </div>
+            </div>
+        </div>
+        <!-- /janela modal .produtoWindowArea -->
+
+
+        <footer>
+            <div class="footer-content">
+                <p>Copyright &copy: 2023, Thaysa Rafaele - todos os direitos reservados</p>
+                <div class="social-list">
+                    <ul>
+                        <li><a href="https://wa.me/5567993455044?text=Olá,%20fui%20direcionado%20pelo%20site%20Baianinha%20Beach"><i class="fab fa-whatsapp"></i></a></li>
+                        <li><a href="https://www.instagram.com/thaysarafaele/"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://github.com/ThaysaRafaele"><i class="fab fa-github"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+
+        <a href="#home" id="link-topo">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+    
+    <script src="./produtos.js"></script>
+
+    </body>
+</html>
