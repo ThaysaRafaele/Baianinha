@@ -1,6 +1,6 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css);
-@import url(https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700&family=Josefin+Slab:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,400;0,500;0,700;1,100;1,400&display=swap);
-
+/* @import url(https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700&family=Josefin+Slab:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,400;0,500;0,700;1,100;1,400&display=swap); */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&display=swap');
 
 *{
     list-style: none;
@@ -15,13 +15,13 @@
 }
 
 .fa-xmark{
-    color: #2b2340;
+    color: #343132;
     cursor: pointer;
 }
 
 body {
-    background-color: #efded6;;
-    font-family:'Lato', Helvetica, Arial;
+    background-color: #80727abd;
+    font-family: 'Lato', sans-serif;
     font-size:15px;
     margin:0;
     min-height:100vh;
@@ -45,11 +45,11 @@ body {
 }
 .hamburguer .fa-xmark{
     display: none;
-    color: #2b2340;
+    color: #343132;
 }
 .hamburguer .fa-bars{
     display: block;
-    color: #d1abbd;
+    color: #343132;
 }
 .show-menu .hamburguer{    
     right: 15rem;
@@ -60,19 +60,6 @@ body {
 .show-menu .hamburguer .fa-bars{
     display: none;
 }
-/* .show-menu #line{
-    transform: rotate(45deg) translate(.3rem, .45rem);
-}
-
-.show-menu #line2{
-    opacity: 0;
-    visibility: hidden;
-}
-
-.show-menu #line3{
-    transform: rotate(-45deg) translate(0.1rem, -0.45rem);
-} */
-
 .show-menu .sidebar{
     right: 0;
     display: block;
@@ -87,14 +74,14 @@ body {
     width: 100%;
     height: .1rem;
     box-shadow: .1rem .1rem 1px #000;
-    background-color: #d1abbd;
+    background-color: #06acb3;
     transition: transform 1s;
 }
 
 .sidebar{
     width: 20rem;
     height: 100vh;
-    background-color: #d1abbd;
+    background-color: #06acb3;
     position: absolute;
     top: 0;
     display: none;
@@ -110,15 +97,17 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #2b2340;
+    background-color: #343132;
     color: #FFF;
     opacity: 0;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
 }
 
 .hamburguer span::before{
     content: "";
     position: absolute;
-    border-right: .5rem solid #2b2340;
+    border-right: .5rem solid #343132;
     border-top: .5rem solid transparent;
     border-left: .5rem solid transparent;
     border-bottom: .5rem solid transparent;
@@ -139,9 +128,9 @@ body {
 }
 
 .menu-link{
-    font-family: "Muli", serif;
+    font-family: 'Lato', sans-serif;
     font-size: 2rem;
-    color: #2b2340;
+    color: #343132;
     transition: color .8s;
 }
 
@@ -158,7 +147,7 @@ body {
 }
 
 .social-media i{
-    color: #2b2340;
+    color: #343132;
     height: 2.5rem;
     width: 2.5rem;
     font-size: 2rem;
@@ -185,7 +174,7 @@ body {
     height: 100%;
     object-fit: cover;
     opacity: 0.5;
-    animation: zoom 25s;
+    animation: zoom 18s;
 }
 
 @keyframes zoom{
@@ -206,7 +195,7 @@ body {
 .banner h1{
     color: #FFFFFF;
     font-size: 3.5rem;
-    font-family: "Baloo Da 2", serif;
+    font-family: 'Lato', sans-serif;
     font-weight: 200;
     text-shadow: .3rem .4rem 2px rgba(0, 0, 0, .4);
     line-height: 3.5rem;
@@ -217,7 +206,8 @@ body {
 .banner p{
     color: #FFF;
     font-size: 2rem;
-    font-family: "Josefin+Slab", serif;
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
     text-shadow: .2rem .2rem rgba(0, 0, 0, .4);
     margin-bottom: 2rem;
     opacity: 0;
@@ -228,11 +218,10 @@ body {
     color: #FFF;
     text-transform:  uppercase;
     letter-spacing: .1rem;
-    font-family: "Muli", serif;
-    background: #2b2340;
-    background: -webkit-linear-gradient(to right, #915a64, #2b2340);
-    background: linear-gradient(to left, #915a64, #2b2340);
-    border:2px solid #2b2340;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    background: linear-gradient(to right, #343132, #06acb3);
+    border:2px solid #343132;
     padding: 1rem 3rem;
     border-radius: 5px;
     cursor: pointer;
@@ -255,7 +244,7 @@ body {
     top:0;
     right:0;
     height:60px;    
-    background: linear-gradient(to left, #915a64, #2b2340);
+    background: linear-gradient(to left, #06acb3, #343132);
     display:flex;  
     justify-content:space-between; 
     align-items: center;
@@ -264,6 +253,7 @@ body {
 .header-Produtos h1 {
     margin-left: 1rem;
     color: #fff;
+    font-weight: 300;
 }
 
 main {
@@ -277,11 +267,14 @@ main {
 .menu-openner {
     margin-right: 15px;
     font-size: 26px;
-    border: 3px solid #2b2340;
+    border: 3px solid #343132;;
     background-color: transparent;
     padding: 5px 20px;
     border-radius: 5px;
-    cursor: pointer;
+    cursor: pointer;    
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
 }
 
 .menu-openner span {
@@ -306,10 +299,11 @@ main {
 }
 
 .titleProdutos h1{
-    font-family: "Baloo Da 2", serif;
+    font-family: 'Lato', sans-serif;    
+    font-weight: 300;
     font-size: 3rem;
-    color: #2b2340;
-    border-bottom: solid 3px #2b2340;
+    color: #343132;
+    border-bottom: solid 3px #343132;
     margin-bottom: 1.5rem;
 }
 
@@ -321,7 +315,7 @@ main {
 .produto-item {
     text-align: center;
     max-width:250px;
-    font-family:'Hepta Slab', Helvetica, Arial;
+    font-family: 'Lato', sans-serif;
     margin:0 auto 50px auto;
 }
 
@@ -346,13 +340,13 @@ main {
     height:50px;
     line-height:50px;
     border-radius:25px;
-    background: linear-gradient(to left, #915a64, #2b2340);
+    background: linear-gradient(to right, #343132, #06acb3);
     text-align:center;
     color:#FFF;
     font-size:22px;
     cursor:pointer;
     margin-top:-25px;
-    border: 1px solid #2b2340;
+    border: 1px solid #343132;
     transition:all ease .2s;
 }
 
@@ -363,20 +357,25 @@ main {
 .produto-item--price {
     font-size:15px;
     color:#333;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
     margin-top:5px;
 }
 
 .produto-item--name {
     font-size:20px;
-    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
     color:#000;
     margin-top:5px;
 }
 
 .produto-item--desc {
-    font-size:13px;
+    font-size:15px;
     color:#555;
     margin-top:10px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
 }
 
 
@@ -430,10 +429,11 @@ main {
 }
 
 .sobreNos-header h1{
-    font-family: "Baloo Da 2", serif;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
     font-size: 3rem;
-    color: #2b2340;
-    border-bottom: solid 3px #2b2340;
+    color: #343132;
+    border-bottom: solid 3px #343132;
     margin-bottom: 1.5rem;
 }
 
@@ -477,7 +477,7 @@ main {
 .info-header{
     display: flex;
     align-items: center;
-    color: #2b2340;
+    color: #343132;
 }
 
 .info-header i{
@@ -487,10 +487,12 @@ main {
 .info-header h3{
     font-size: 2rem;
     padding-left: 1rem;
+    font-weight: 400;
 }
 
 .info-text{
     margin-top: 1rem;
+    font-weight: 300;
 }
 
 .info-img-wrapper{
@@ -507,9 +509,9 @@ main {
 /* ------------- Carrinho ------------- */
 
 .aside-carrinho {
-    background-color:#d1abbd;
+    background-color:#06acb3;
     width:0vw;
-    font-family:'Hepta Slab', Helvetica, Arial;
+    font-family: 'Lato', sans-serif;
     transition:all ease .2s;
     overflow-x:hidden;
     position: absolute;
@@ -614,12 +616,12 @@ main {
 .cart--finalizar {
     padding:20px 30px;
     border-radius:20px;
-    background: linear-gradient(to left, #915a64, #2b2340);
+    background: linear-gradient(to left, #915a64, #343132);
     color:#FFF;
     cursor:pointer;
     text-align:center;
     margin-top:20px;
-    border:2px solid #2b2340;
+    border:2px solid #343132;
     transition: all ease .2s;
 }
 
@@ -677,7 +679,7 @@ main {
 
 .produtoInfo {
     flex:1;
-    font-family:'Hepta Slab', Helvetica, Arial;
+    font-family: 'Lato', sans-serif;
     padding-bottom:50px;
 }
 
@@ -689,7 +691,7 @@ main {
     font-size:15px;
     color:#999;
     margin-top:10px;
-    font-family:'Lato',Helvetica,Arial;
+    font-family: 'Lato', sans-serif;
 }
 
 .produtoInfo--sector {
@@ -720,7 +722,7 @@ main {
 }
 
 .produtoInfo--size.selected {
-    background: linear-gradient(to left, #915a64, #2b2340);
+    background: linear-gradient(to left, #915a64, #343132);
     color: white;
 }
 
@@ -767,7 +769,7 @@ main {
     display:inline-block;
     cursor:pointer;
     margin-right:30px;
-    background: linear-gradient(to left, #915a64, #2b2340);
+    background: linear-gradient(to left, #915a64, #343132);
 }
 
 .produtoInfo--cancelButton {
@@ -776,7 +778,7 @@ main {
     margin-top:30px;
     padding:20px 30px;
     border-radius:20px;
-    font-family: "Muli", serif;
+    font-family: 'Lato', sans-serif;
     background: linear-gradient(to left, #bd4d61, #600404);
     color: #FFFFFF;
     border: none;
@@ -802,10 +804,10 @@ main {
 }
 
 .sessao-contato h1{
-    font-family: "Baloo Da 2", serif;
-    color: #2b2340;
+    font-family: 'Lato', sans-serif;    
+    font-weight: 300;
+    color: black;
     font-size: 2rem;
-    font-weight: lighter;
     text-align: center;
 }
 
@@ -814,9 +816,10 @@ main {
     height: 70%;
     flex-direction: column;
     align-items: flex-start;
-    font-family: "Baloo Da 2", serif;    
-    font-weight: 600;
-    color: #2b2340;
+    font-family: 'Lato', sans-serif;    
+    font-weight: 300;
+    color: black;
+    border-color: #000;
 }
 
 .contato-wrapper{
@@ -829,10 +832,7 @@ main {
 .contato-left{    
     width: 35%;    
     height: 100%;
-    background: 
-        linear-gradient(rgba(15, 15, 15, 0.6), rgba(48 , 18, 33, 0.9)),
-        url(./assets/envelopes.jpg);
-    background-size: cover;
+    background: linear-gradient(to left, #06acb3, #343132);
 }
 
 .contato-right {
@@ -878,10 +878,10 @@ textarea {
 }
 
 .button button {    
-    font-family: "Baloo Da 2", serif;    
-    font-weight: 600;
+    font-family: 'Lato', sans-serif;    
+    font-weight: 300;
     color: white;
-    background: linear-gradient(to left, #915a64, #2b2340);    
+    background: linear-gradient(to left, #06acb3, #343132);    
     border-radius: 5px;
 }
 
@@ -893,20 +893,21 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #d1abbd;
+    background: #06acb3;
     color: #ffffff;
     box-sizing: border-box;
 }
 
 .footer-content p{
     font-size: 1.2rem;
-    font-family: "Josefin+Slab", serif;
-    color: #2b2340;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    color: #343132;
 }
 
 .social-list a{
     margin: 0 2rem;
-    color: #2b2340;
+    color: #343132;
     font-size: 1.3rem;
 }
 
@@ -923,15 +924,12 @@ footer{
     bottom: 1rem;
     width: 3rem;
     height: 3rem;
-    background: #2b2340;
-    background: -webkit-linear-gradient(to right, #915a64, #2b2340);
-    background: linear-gradient(to left, #915a64, #2b2340);
+    background: linear-gradient(to right, #343132, #06acb3);
     display: flex;
     justify-content: center;
     align-items: center;
     color: #FFFFFF;
     border-radius: .3rem;
-    box-shadow: 0 0.1rem 0.6rem #000000009;
 }
 
 /* ------------- RESPONSIVIDADE ------------- */
